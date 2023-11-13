@@ -1,0 +1,7 @@
+Challenge: Forbidden Paths
+After reading the statement provided. I had to first understand what exactly are absolute file paths and file paths in general.
+So I refered the article: 'https://phpdelusions.net/articles/paths'
+From here i was able to understand the difference between absolute filepaths and relative file paths as well as how to access them
+I used the following input to get the flag: '../../../../flag.txt'
+Flag:  picoCTF{7h3_p47h_70_5ucc355_e5fe3d4d}
+Challenge: caas
