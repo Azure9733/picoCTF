@@ -1,6 +1,8 @@
-# picoCTF
-Writeup for the PicoCTF Challenges
-Screenshots:-
-Web Exploitation:
-Forbidden Path
-![Screenshot 2023-11-13 173644](https://github.com/Azure9733/picoCTF/assets/143328010/6386b5e1-d34f-4402-a5c9-e622246ae619)
+# picoCTF  
+Writeup for the PicoCTF Challenges  
+This is part of my Cryptonite Student Project Task Phase 2.  
+I was given 15 challenges (3 for each domain - Web, bin, rev, cryptography and forensics).  
+
+Before doing the challenges I went through the Primer walkthrough to get an idea and understanding how each domain.
+https://primer.picoctf.org/  
+It was really fun!!  
