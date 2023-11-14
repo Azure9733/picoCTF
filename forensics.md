@@ -39,3 +39,15 @@ It did not work. Tried picture 2 and 3. And it worked on picture3:
 Then i used steghide extract -sf picture3.bmp and the flag.txt file was saved in the working directory.  
 ![image](https://github.com/Azure9733/picoCTF/assets/143328010/c712d8b6-e453-4b81-8e8b-bda32d67de65)  
 ![image](https://github.com/Azure9733/picoCTF/assets/143328010/0235fa57-2d98-4248-a2f7-76512446d0c4)  
+## Challenge Macrohard Weakedge
+The file is a Macro PPT. Opening it gives blank slides.  
+I find the name quite revealing. Macro is hard but Edge is weak. There must be a meaning behind that.  
+After looking up online, i couldnt find any meaning behind that :(  
+I ended up referring a writeup for this as well 'https://github.com/vivian-dai/PicoCTF2021-Writeup/blob/main/Forensics/MacroHard%20WeakEdge/MacroHard%20WeakEdge.md'  
+Installed binwalk and checked the ppt file via binwalk.  
+I find alot of zip files. Using binwalk -e 'Forensics is fun.pptm', i extract the files.  
+Here i was totally relying on the writeup and focused more on trying to understand what was the approach.  
+Extracting the 0.zip file, the command  `find -D tree|grep hidden` was used. Using man find i found that we are finding via debug option tree which shows the expression tree in its original and optimised form.  
+I wanted to know more about tree and ended up downloading the tree command library.  
+Using that i was able to see a tree of all the files and folders in my working directory.  
+I found hidden folder as well here:  
