@@ -39,7 +39,7 @@ It did not work. Tried picture 2 and 3. And it worked on picture3:
 Then i used steghide extract -sf picture3.bmp and the flag.txt file was saved in the working directory.  
 ![image](https://github.com/Azure9733/picoCTF/assets/143328010/c712d8b6-e453-4b81-8e8b-bda32d67de65)  
 ![image](https://github.com/Azure9733/picoCTF/assets/143328010/0235fa57-2d98-4248-a2f7-76512446d0c4)  
-## Challenge Macrohard Weakedge
+## Challenge Macrohard Weakedge  
 The file is a Macro PPT. Opening it gives blank slides.  
 I find the name quite revealing. Macro is hard but Edge is weak. There must be a meaning behind that.  
 After looking up online, i couldnt find any meaning behind that :(  
@@ -51,3 +51,10 @@ Extracting the 0.zip file, the command  `find -D tree|grep hidden` was used. Usi
 I wanted to know more about tree and ended up downloading the tree command library.  
 Using that i was able to see a tree of all the files and folders in my working directory.  
 I found hidden folder as well here:  
+![Screenshot 2023-11-15 020304](https://github.com/Azure9733/picoCTF/assets/143328010/c603ae23-b211-4dae-bd8b-2cc089fcd2d1)  
+I ended up finding a better way on my own!!  
+Changing the directory towards the hidden file and opening it, i found a cyphered text:  
+![image](https://github.com/Azure9733/picoCTF/assets/143328010/6631ce1c-67f5-4bc0-8e4b-67e10ac1ac33)  
+Using the cypher identifier 'https://www.dcode.fr/cipher-identifier', it was found to be Base64.  
+Decoding it gave the flag  
+flag: picoCTF{D1d_u_kn0w_ppts_r_z1p5}  
