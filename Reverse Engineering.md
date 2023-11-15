@@ -33,3 +33,12 @@ print(hashlib.sha256(bUsername_trial).hexdigest()[8])
 ```
 This gave the result "e584b363"  
 So the flag is "picoCTF{1n_7h3_|<3y_of_e584b363}"
+## Challenge GDB baby step 1  
+![image](https://github.com/Azure9733/picoCTF/assets/143328010/baf187d5-f1fa-426e-9ed9-e440813bb351)  
+Using gdb, i look for main function:  
+![image](https://github.com/Azure9733/picoCTF/assets/143328010/24a3825a-3d12-49d5-aed5-75614a51269c)  
+For convenience i make the syntax format intel and then disassemble:  
+![image](https://github.com/Azure9733/picoCTF/assets/143328010/bae4fbc5-560b-49bb-a0f5-87fb626f7001)  
+Now i focus on eax register as instructed. It is visible that the hexadecimal value in eax register is '0x86342'.  
+Converting that to decimal via 'https://www.binaryhexconverter.com/hex-to-decimal-converter', n = 549698.  
+Flag: picoCTF{549698}
