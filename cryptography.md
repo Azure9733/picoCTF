@@ -86,7 +86,7 @@ p = bytes.fromhex(hex(m)[2:]).decode('utf-8')
 print(p)
 ```
 Running this in python3 command gave me the flag.  
-Flag: picoCTF{n33d_a_lArg3r_e_0a41ef50}
+Flag: picoCTF{n33d_a_lArg3r_e_11db861f}
 Which seems to be incorrect and i cannot figure out why.
 
 ## Challenge Basic Mod 1  
