@@ -54,8 +54,42 @@ for key in ALPHABET:
     print(s)
 ```
 which gives 'et_tu?_0797f143e2da9dd3e7555d7372ee1bbe'  
-flag: picoCTF{et_tu?_0797f143e2da9dd3e7555d7372ee1bbe}
-## Challenge Mod 1  
+flag: picoCTF{et_tu?_0797f143e2da9dd3e7555d7372ee1bbe}  
+## Challenge miniRSA
+![image](https://github.com/Azure9733/picoCTF/assets/143328010/078db832-ded3-423a-a230-b26d89f623bf)  
+Couldnt figure out what to do so i referred a writeup 'https://ctf.samsongama.com/ctf/crypto/picoctf19-minirsa.html'  
+Created a python file and inputed the following:  
+```
+c = 2205316413931134031074603746928247799030155221252519872649594750678791181631768977116979076832403970846785672184300449694813635798586699205901153799059293422365185314044451205091048294412538673475392478762390753946407342073522966852394341
+
+def find_cubic_root(n):
+    a = 1
+    b = n
+    while b - a > 1:
+        mid = (a + b) // 2
+        if mid**3 > n:
+            b = mid
+        else:
+            a = mid
+
+    if a ** 3 == n:
+        return a
+    elif b ** 3 == n:
+        return b
+    else:
+        return 0
+
+m = find_cubic_root(c)
+h = hex(m)
+print(h)
+p = bytes.fromhex(hex(m)[2:]).decode('utf-8')
+print(p)
+```
+Running this in python3 command gave me the flag.  
+Flag: picoCTF{n33d_a_lArg3r_e_0a41ef50}
+Which seems to be incorrect and i cannot figure out why.
+
+## Challenge Basic Mod 1  
 Reading the problem statement and its requirements, i had no clue what to do so i referred a writeup  
 Created a python script for the required conditions:  
 ```
