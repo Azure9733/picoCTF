@@ -42,3 +42,16 @@ For convenience i make the syntax format intel and then disassemble:
 Now i focus on eax register as instructed. It is visible that the hexadecimal value in eax register is '0x86342'.  
 Converting that to decimal via 'https://www.binaryhexconverter.com/hex-to-decimal-converter', n = 549698.  
 Flag: picoCTF{549698}
+(I took help from the commands given in primer.picoctf.org)  
+## Challenge: ARMssembly 0  
+![image](https://github.com/Azure9733/picoCTF/assets/143328010/47a5b59b-b05b-4301-9629-9783145a2468)  
+Here i was not familiar with ARM assembly so i referred 'https://ctftime.org/writeup/26962' to figure out what was happening.  
+~~
+ 2 values are there - '3854998744' i.e. w0 and '915131509' i.e. w1 stored on the stack at offset address 12 and 8 respectively.  
+Then we load the value at offset 12 on the stack into w1 and offset 8 into w0.  
+And compare by substracting w0 from w1 = '2939867235'  
+~~  
+I could not understand the functioning so i referred 'https://youtu.be/BMvda3d0dt8?si=AsMBk8z5NFty7an5'  
+Following this i converted the largest value to 32 bit hexadecimal and got the flag.  
+Flag picoCTF{e5c69cd8}  
+-----x---x-----
